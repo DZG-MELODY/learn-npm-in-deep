@@ -1,6 +1,6 @@
 {
   "name": "learn-npm-pkg-b",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "example of npm package for learn npm in deep",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,6 @@
   "author": "dzg",
   "license": "ISC",
   "dependencies": {
-    "learn-npm-pkg-a": "1.0.0"
+    "learn-npm-pkg-a": "^1.0.0"
   }
 }

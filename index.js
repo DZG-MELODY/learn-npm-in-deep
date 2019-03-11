@@ -1,9 +1,17 @@
-const say = require('learn-npm-pkg-a');
-const introduce = require('learn-npm-pkg-b');
+const pkgA = require('learn-npm-pkg-a');
+const pkgB = require('learn-npm-pkg-b');
 
-console.log();
-console.log();
-say('world');
-console.log();
-console.log();
-introduce('dzg');
+function output () {
+  console.log();
+  console.log();
+  pkgA('call pkgA');
+  console.log();
+  console.log();
+  pkgB('call pkgB');
+  console.log();
+  console.log();
+}
+
+output();
+
+module.exports = output;
