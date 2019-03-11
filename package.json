@@ -21,7 +21,11 @@
   },
   "homepage": "https://github.com/DZG-MELODY/learn-npm-in-deep#readme",
   "dependencies": {
-    "learn-npm-pkg-a": "^1.0.0",
+    "learn-npm-pkg-a": "^2.0.0",
     "learn-npm-pkg-b": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^11.11.0",
+    "rapid-console": "^0.1.2"
   }
 }
