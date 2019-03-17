@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const logger = require('rapid-console').default;
 
-const FILTER = ['learn-npm-pkg-a', 'learn-npm-pkg-b'];
+const FILTER = ['learn-npm-pkg-a', 'learn-npm-pkg-b', 'vue', 'vuex'];
 
 function iterateNodeModules (dir, depth = 0) {
   const selfDepth = depth;
