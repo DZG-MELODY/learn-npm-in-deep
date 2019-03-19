@@ -1,11 +1,15 @@
 {
-  "name": "learn-npm-in-deep",
+  "name": "nested-webpack",
   "version": "1.0.0",
   "description": "learn npm in deep",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "fresh": "npm i learn-npm-pkg-a && npm i learn-npm-pkg-b"
+    "start": "node index",
+    "list": "node ../scan.js",
+    "fresh": "rm -rf node_modules && npm i",
+    "build": "node build.js",
+    "production": "node optimise-build.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +26,10 @@
   },
   "homepage": "https://github.com/DZG-MELODY/learn-npm-in-deep#readme",
   "devDependencies": {
-    "@types/node": "11.11.3",
-    "rapid-console": "^0.1.2"
+    "duplicate-package-checker-webpack-plugin": "^3.0.0",
+    "learn-npm-pkg-a": "^2.0.2",
+    "learn-npm-pkg-b": "^1.0.2",
+    "webpack": "^4.29.6",
+    "webpack-command": "^0.4.2"
   }
 }

@@ -1,10 +1,10 @@
-const pkgA = require('learn-npm-pkg-a');
-const version = '1.0.0';
+const pkgC = require('learn-npm-pkg-c');
+const version = '2.0.0';
 
 module.exports = function (tip) {
   console.log(`==== package B version ${version} ====`);
   if (tip) console.log(`[tip in B] : ${tip}`);
   console.log('>>>>>>>>>>>');
-  pkgA('call package A in package B');
+  pkgC('call package C in package B');
   console.log('<<<<<<<<<<<');
 };
