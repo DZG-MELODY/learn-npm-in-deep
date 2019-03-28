@@ -10,7 +10,7 @@
     "fresh": "rm -rf node_modules && npm i"
   },
   "dependencies": {
-    "learn-npm-pkg-a": "^2.0.0",
+    "learn-npm-pkg-a": "^3.0.0",
     "learn-npm-pkg-b": "^1.0.2"
   },
   "author": "",

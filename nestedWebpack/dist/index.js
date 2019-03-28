@@ -81,53 +81,57 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ "./index.js":
-/*!******************!*\
-  !*** ./index.js ***!
-  \******************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("const pkgA = __webpack_require__(/*! learn-npm-pkg-a */ \"./node_modules/learn-npm-pkg-a/index.js\");\nconst pkgB = __webpack_require__(/*! learn-npm-pkg-b */ \"./node_modules/learn-npm-pkg-b/index.js\");\n\nfunction output () {\n  console.log();\n  console.log();\n  pkgA('call pkgA');\n  console.log();\n  console.log();\n  pkgB('call pkgB');\n  console.log();\n  console.log();\n}\n\noutput();\n\n\n//# sourceURL=webpack:///./index.js?");
-
-/***/ }),
-
-/***/ "./node_modules/learn-npm-pkg-a/index.js":
-/*!***********************************************!*\
-  !*** ./node_modules/learn-npm-pkg-a/index.js ***!
-  \***********************************************/
-/*! no static exports found */
+/******/ ([
+/* 0 */
 /***/ (function(module, exports) {
 
-eval("const version = '2.0.0';\n\nmodule.exports = function (tip) {\n  console.log(`==== package A version ${version} ====`);\n  if (tip) console.log(`[tip in A] : ${tip}`);\n};\n\n\n//# sourceURL=webpack:///./node_modules/learn-npm-pkg-a/index.js?");
+const version = '2.0.0';
+
+module.exports = function (tip) {
+  console.log(`==== package A version ${version} ====`);
+  if (tip) console.log(`[tip in A] : ${tip}`);
+};
+
 
 /***/ }),
-
-/***/ "./node_modules/learn-npm-pkg-b/index.js":
-/*!***********************************************!*\
-  !*** ./node_modules/learn-npm-pkg-b/index.js ***!
-  \***********************************************/
-/*! no static exports found */
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const pkgA = __webpack_require__(/*! learn-npm-pkg-a */ \"./node_modules/learn-npm-pkg-b/node_modules/learn-npm-pkg-a/index.js\");\nconst version = '1.0.0';\n\nmodule.exports = function (tip) {\n  console.log(`==== package B version ${version} ====`);\n  if (tip) console.log(`[tip in B] : ${tip}`);\n  console.log('>>>>>>>>>>>');\n  pkgA('call package A in package B');\n  console.log('<<<<<<<<<<<');\n};\n\n\n//# sourceURL=webpack:///./node_modules/learn-npm-pkg-b/index.js?");
+const pkgA = __webpack_require__(0);
+const pkgB = __webpack_require__(2);
+
+function output () {
+  console.log();
+  console.log();
+  pkgA('call pkgA');
+  console.log();
+  console.log();
+  pkgB('call pkgB');
+  console.log();
+  console.log();
+}
+
+output();
+
 
 /***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
 
-/***/ "./node_modules/learn-npm-pkg-b/node_modules/learn-npm-pkg-a/index.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/learn-npm-pkg-b/node_modules/learn-npm-pkg-a/index.js ***!
-  \****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+const pkgA = __webpack_require__(0);
+const version = '1.0.0';
 
-eval("const version = '1.0.0';\n\nmodule.exports = function (tip) {\n  console.log(`==== package A version ${version} ====`);\n  if (tip) console.log(`[tip in A] : ${tip}`);\n};\n\n\n//# sourceURL=webpack:///./node_modules/learn-npm-pkg-b/node_modules/learn-npm-pkg-a/index.js?");
+module.exports = function (tip) {
+  console.log(`==== package B version ${version} ====`);
+  if (tip) console.log(`[tip in B] : ${tip}`);
+  console.log('>>>>>>>>>>>');
+  pkgA('call package A in package B');
+  console.log('<<<<<<<<<<<');
+};
+
 
 /***/ })
-
-/******/ });
+/******/ ]);
